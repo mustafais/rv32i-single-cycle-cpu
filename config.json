@@ -1,0 +1,28 @@
+{
+  "DESIGN_NAME": "CPU",
+  "VERILOG_FILES": [
+    "dir::src/CPU_top.sv",
+    "dir::src/ALU/ALU.sv",
+    "dir::src/ALU/ALU_op1_mux.sv",
+    "dir::src/CONTROL_UNIT/ALU_control_unit.sv",
+    "dir::src/CONTROL_UNIT/control_unit.sv",
+    "dir::src/IMED/IMED.sv",
+    
+    "dir::src/MEMORY/JUMP_MUX.sv",
+    
+    "dir::src/MEMORY/MEMORY_MUX.sv",
+    "dir::src/PC/add4.sv",
+    "dir::src/PC/jalr_mux.sv",
+    "dir::src/PC/load_mux.sv",
+    "dir::src/PC/PCfile.sv",
+    "dir::src/PC/PC_SRC.sv",
+    "dir::src/PC/PC_top.sv",
+    "dir::src/PC/SHIFT_ADD.sv",
+    "dir::src/REGISTER/REGIS_file.sv"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 10.0,
+  "FP_CORE_UTIL": 40,
+  "PL_TARGET_DENSITY": 0.45,
+  "PDK": "sky130A"
+}

@@ -1,0 +1,36 @@
+# OpenLane generated files
+runs/
+openlane_run/
+*.odb
+*.def
+*.gds
+*.spef
+*.sdf
+
+# Simulation files
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+*.log
+
+# Verilator
+obj_dir/
+
+# Icarus Verilog
+*.vvp
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+
