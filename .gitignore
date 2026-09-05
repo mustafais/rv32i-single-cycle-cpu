@@ -34,3 +34,7 @@ Thumbs.db
 *.tmp
 *.swp
 
+#exceptions
+!physical_design/
+!physical_design/gds/
+!physical_design/gds/*.gds
