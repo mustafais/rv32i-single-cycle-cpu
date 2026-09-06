@@ -2,13 +2,13 @@
 
 A 32-bit single-cycle RISC-V processor implemented in SystemVerilog with separate instruction and data memories.
 
-The project was built to explore CPU architecture, RTL design, functional verification, and the ASIC physical-design flow. The processor implements core RV32I functionality including arithmetic and logical operations, branches, jumps, loads, stores, immediate operations, and register-file access.
+The project was built to explore CPU architecture, RTL design, functional verification, and the ASIC physical-design flow. The processor currently implements 31 RV32I base instructions, covering integer arithmetic and logic, immediate operations, conditional branches, jumps, upper-immediate operations, and word-level memory access with LW and SW.
 
 The RTL has also been taken through the OpenLane RTL-to-GDS flow using the SKY130 PDK. Physical-design optimization is still ongoing, with a current goal of achieving timing closure at 100 MHz.
 
 ## Architecture
 
-* 32-bit RV32I processor
+* 32-bit RISC-V processor implementing a 31-instruction RV32I subset
 * Single-cycle datapath
 * Harvard-style instruction/data memory organization
 * 32 × 32-bit register file
@@ -21,7 +21,7 @@ The current processor supports major RV32I instruction categories, including:
 
 * Register-register arithmetic and logic
 * Immediate arithmetic and logic
-* Loads and stores
+* Word load and store (LW, SW)
 * Conditional branches
 * `JAL`
 * `JALR`
@@ -85,6 +85,9 @@ Current work includes:
 ## Known Limitations
 
 * 100 MHz timing closure has not yet been achieved
+* The processor currently implements 31 RV32I base instructions rather than the full base ISA
+* Byte and halfword memory operations are not implemented
+* ECALL and EBREAK are not implemented
 * Full RV32I compliance testing has not yet been completed
 * Formal verification has not yet been performed
 * RV32M multiply/divide instructions are not implemented
@@ -96,6 +99,7 @@ Current work includes:
 Possible future improvements include:
 
 * Achieving timing closure at 100 MHz
+* Adding remaining RV32I base instructions
 * More comprehensive automated verification
 * SystemVerilog Assertions
 * Cocotb or UVM-based verification
